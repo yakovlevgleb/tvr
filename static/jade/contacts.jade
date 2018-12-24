@@ -1,0 +1,65 @@
+include blocks/blocks
+
+doctype html
+html(lang="ru")
+	+head
+	.l-wrapper(style="min-height: 1009px;")
+		include includes/header.html
+		.l-middle(style="padding-bottom: 240px;")
+			.l-container.i-clfx
+				.l-content
+					section(role="main")
+						include includes/bg.html
+						.b-section.b-section_contact
+							.b-section__content.i-clfx
+								section.i-contact
+									.i-contact__office
+										h2.i-contact__title Главный офис
+										.i-contact__office-wrapper
+											img(src="./img/office.jpg", alt="").i-contact__office-img
+											.i-contact__office-info
+												p.i-contact__office-name ООО «Таврида Электрик»
+												p.i-contact__office-adress 125040, город Москва, 5-я улица Ямского Поля, дом 5, строение 1, Бизнес-центр «Solutions», 18 этаж
+												.i-contact__phones
+													a(href="tel:+74959952525") +7 (495) 995-25-25
+													a(href="tel:+74959952553") +7 (495) 995-25-53
+												a(href="mailto:info@tavrida.com").i-contact__mail info@tavrida.com
+												a(href="").i-contact__onmap Показать на карте
+									.i-contact__maincontact
+										h2.i-contact__title Основной контакт
+										.i-contact__maincontact-wrapper
+											img(src="./img/man.jpg", alt="").i-contact__maincontact-img
+											.i-contact__maincontact-info
+												p.i-contact__maincontact-name Константин Константинопольский
+												p.i-contact__maincontact-position Директор филиала
+												.i-contact__phones
+													a(href="tel:+74959952525") +49 (7542) 946-78-51
+												a(href="mailto:ojc@tavrida.com").i-contact__mail ojc@tavrida.com
+									.i-contact__representatives
+										h3.i-contact__representatives-title Представители в вашем регионе
+
+										ul.i-contact__representatives-list
+											li.i-contact__representatives-item
+												span.i-contact__representatives-place Таврида Электрик Африка
+												span.i-contact__representatives-name Йоханнес Окон
+												span.i-contact__representatives-position Региональный представитель
+												span.i-contact__representatives-city ЮАР
+												.i-contact__phones
+													a(href="tel:+4975429464952") +49 (7542) 946-49-52
+													a(href="tel:+4975429461728") +49 (7542) 946-17-28
+												a(href="mailto:jim@tavrida.com").i-contact__mail jim@tavrida.com
+
+											li.i-contact__representatives-item
+												span.i-contact__representatives-name Сидоренко Александр Петрович
+												span.i-contact__representatives-position Региональный представитель
+												.i-contact__phones
+													a(href="tel:+4975423541212") +49 (7542) 354-12-12
+													a(href="tel:+4975429127555") +49 (7542) 912-75-55
+
+											li.i-contact__representatives-item
+												span.i-contact__representatives-place Представительство в Канаде
+												span.i-contact__representatives-position Региональный представитель
+												.i-contact__phones
+													a(href="tel:+5275425347557") +52 (7542) 534-75-57
+												a(href="mailto:sales@tavrida.com").i-contact__mail sales@tavrida.com
+		include includes/footer.html
