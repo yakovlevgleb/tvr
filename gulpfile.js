@@ -173,10 +173,10 @@ gulp.task('js', function() {
 				}
 			})
 		}))
-		.pipe(sourcemaps.init())
-		.pipe(sourcemaps.write())
-		.pipe(uglify())
-		.pipe(rename('script.min.js'))
+		// .pipe(sourcemaps.init())
+		// .pipe(sourcemaps.write())
+		// .pipe(uglify())
+		// .pipe(rename('script.min.js'))
 		.pipe(gulp.dest(dirs.build + "/static/js/"))
 		.pipe(browserSync.stream());
 });
@@ -189,8 +189,10 @@ gulp.task('build', function(callback) {
 gulp.task('serve', ['build'], function() {
 
 	browserSync.init({
-		server: dirs.build,
-		directory: true,
+		server: {
+			baseDir: dirs.build,
+			directory: true
+		},
 		port: 8080
 	});
 
