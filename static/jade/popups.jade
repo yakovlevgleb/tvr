@@ -1,0 +1,22 @@
+include blocks/blocks
+
+doctype html
+html(lang="ru")
+	+head
+	.l-wrapper(style="min-height: 1009px;")
+		include includes/header.html
+		.l-middle(style="padding-bottom: 240px;")
+			.l-container.i-clfx
+				.l-content
+					section(role="main")
+						include includes/bg.html
+						.b-section.b-section_contact
+							.b-section__content.i-clfx
+								section.i-contact
+									.i-contact__office
+										a(href="#autodetection", style="font-size: 14px; line-height: 14px; color: red; display: block; margin-bottom: 10px;").js-fancybox3 ПОПАП РАЗ
+										a(href="#scountry", style="font-size: 14px; line-height: 14px; color: red; display: block; margin-bottom: 10px;").js-fancybox3 ПОПАП ДВА
+										a(href="#scity", style="font-size: 14px; line-height: 14px; color: red; display: block; margin-bottom: 10px;").js-fancybox3 ПОПАП ТРИ
+		include includes/footer.html
+		+scripts
+		+hidden-block
