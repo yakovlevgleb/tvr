@@ -159,7 +159,7 @@
 	padding: 60px;
 	position: relative;
 	background-image: url('../i/country-bg.jpg');
-	background-position: top right;
+	background-position: top 60px right;
 	background-repeat: no-repeat;
 
 	&__title {
@@ -353,6 +353,203 @@
 			color: $text-color;
 			transition: color .5s, border .5s;
 			border-bottom: 1px solid transparent;
+		}
+	}
+}
+
+.scity {
+	width: 1100px;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 60px;
+	position: relative;
+	background-image: url('../i/city-bg.jpg');
+	background-position: top right;
+	background-repeat: no-repeat;
+
+	&__title {
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 26px;
+		color: $text-color;
+		letter-spacing: 0;
+		text-transform: none;
+		margin-bottom: 57px;
+	}
+
+	&__tab {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__tab-links {
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 14px;
+		position: relative;
+		margin-bottom: 15px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 471px;
+			background-color: #ebebeb;
+		}
+	}
+
+	&__tab-links-item {
+		position: relative;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 22px;
+		padding: 0;
+		background: none;
+		text-transform: uppercase;
+		color: $text-color;
+		border-bottom: 1px dotted $text-color;
+		margin-right: 23px;
+		transition: border .5s;
+		cursor: pointer;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			border-color: transparent;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 4px;
+			background-color: transparent;
+			left: 0;
+			right: 0;
+			bottom: -25px;
+			transition: border .5s;
+		}
+
+		&.active {
+			border-color: transparent;
+
+			&:before {
+				background-color: $green;
+			}
+		}
+	}
+
+	&__form {
+		margin-bottom: 34px;
+		max-width: 470px;
+		position: relative;
+		margin-bottom: 3px;
+	}
+
+	&__input {
+		border: 1px solid #ebebeb;
+		box-shadow: none;
+		border-radius: 0;
+		background-color: white;
+		padding-left: 14px;
+		padding-right: 40px;
+		outline: none;
+		line-height: 38px;
+		font-size: 13px;
+		font-weight: 400;
+		color: $text-color;
+		width: 100%;
+		box-sizing: border-box;
+		font-family: "LatoRegular", Arial, FreeSans, sans-serif;
+
+		&::-webkit-input-placeholder {
+			color: #aaa;
+		}
+
+		&::-moz-placeholder {
+			color: #aaa;
+		}
+
+		&:-ms-input-placeholder {
+			color: #aaa;
+		}
+
+		&:-moz-placeholder {
+			color: #aaa;
+		}
+	}
+
+	&__submit {
+		z-index: 1;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		border: none;
+		font-size: 0;
+		line-height: 0;
+		color: transparent;
+		background-color: transparent;
+		box-shadow: none;
+		width: 40px;
+		height: 40px;
+		background-position: center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		outline: none;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBkKCzMuCtg2AAAAsElEQVQY023NIQ7CUBCE4b8vdQTTAyDmpRaJAjQQSsIFQNdxACS+EgnpBUjAP4MDDPheAg6wiKaihFk33yaDYShT0EcfBc2N+iLD7+iz5wqMyXlWWwA010VJ86dEZ2WGgYJmTW0YmirU8Fa3BV29DcPxGyMCcDwYtmDEvYaC3CdN6xNyipQUV114cfAT3/EdP+Xoei4GiAzwCzYMgBuFiylZcYqsNZACLClZ/wNYkn0BZlxCzKM6uPIAAAAASUVORK5CYII=');
+		transition: background .5s;
+
+		&:hover {
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEX///8jiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWwjiWz////QQRRKAAAAF3RSTlMATb7zTISySQxKsxLyDbFIC9BRTvRSnvFZR2MAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gwZChAUIjamxwAAAFVJREFUCNdNjEkSgCAMBLMAYVMR0f8/VSCXzGEyXdUVAEBiJgc7PkiMKfu1XS7rlICzKakgNKseCkc1EHlpYjQM5gH482pNwt238NAYhJ2VNJ1fS98PlzUCQL3hVfsAAAAASUVORK5CYII=');
+		}
+	}
+
+	&__column {
+		max-width: 511px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__list {
+		width: calc(100% / 3 - 20px);
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__item {
+		background: none;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		margin-bottom: 4px;
+
+		a {
+			text-decoration: none;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 22px;
+			color: $text-color;
+			transition: color .5s,
+			border .5s;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				color: $green;
+				border-color: $green;
+			}
 		}
 	}
 }
