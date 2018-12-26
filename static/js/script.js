@@ -42,4 +42,14 @@
 				.addClass('active');
 		});
 	});
+
+	$('.js-show-more').click(function () {
+		$(this).toggleClass('active');
+		$(this).parent().find('.scity__column--hidden').slideToggle();
+		if ($(this).hasClass('active')) {
+			$(this).text('Скрыть');
+		} else {
+			$(this).text('Показать ещё');
+		}
+	});
 });
