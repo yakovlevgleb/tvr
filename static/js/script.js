@@ -3,7 +3,8 @@
 		padding: 0,
 		margin: 0,
 		height: 'auto',
-		closeBtn: false,
+		autoHeight: 'true',
+		// closeBtn: false,
 		helpers: {
 			overlay: {
 				css: {
