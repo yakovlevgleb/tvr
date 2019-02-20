@@ -4,7 +4,7 @@
 		margin: 0,
 		height: 'auto',
 		autoHeight: 'true',
-		// closeBtn: false,
+		closeBtn: false,
 		helpers: {
 			overlay: {
 				css: {
@@ -46,7 +46,7 @@
 
 	$('.js-show-more').click(function () {
 		$(this).toggleClass('active');
-		$(this).parent().find('.scity__column--hidden').slideToggle();
+		$(this).parent().find('.scity__column--hidden, .scountry__column--hidden').slideToggle();
 		if ($(this).hasClass('active')) {
 			$(this).text('Скрыть');
 		} else {
